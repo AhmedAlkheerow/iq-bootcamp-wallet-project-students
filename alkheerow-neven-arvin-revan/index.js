@@ -9,40 +9,68 @@ const currentSymbol = document.getElementById('current-symbol')
 const currentNumber = document.getElementById('current-number')
 const income = document.getElementById('income')
 const expense = document.getElementById('expense')
-class Wallet {
-    constructor(name, currency,balance, description, transactions) {
-        this.name = name;
-        this.currency= currency;
-        this.balance = balance;
-        this.description = description;
-        this.transactions = transactions
-    }
+const ghost = document.getElementById('ghost')
+const addData = document.getElementById('submit-form');
+const arrOfWallet = []
+const inputName = document.getElementById('inputName')
+const formCheckInput = document.getElementsByClassName('form-check-input')
+const balance = document.getElementById('inputBalance')
+const description = document.getElementById('inputDescription')
+document.addEventListener('DOMOnLoaded',()=>{
 
-}
+})
+addData.addEventListener('submit',(e)=>{
+    e.preventDefault()
+    let w = new Wallet(inputName.value,"2342",parseInt(balance.value),description.value)
+    // +
+    
+    
 
-class Transaction {
-    constructor ( id,date, tags, note){
-        this.id=id;
-        this.date = date;
-        this.tags = tags;
-        this.note = note;
 
-    }
-}
-class Expense extends Transaction{
+    arrOfWallet.push(w)
+    console.log(arrOfWallet)
+    console.log(w.balance)
+    ghost.remove();
+    CreatHtml.createHtmlForWallet(w);
+    console.log(inputName.value)
+    console.log(balance.value)
+})
 
-}
-class Income extends Transaction{
 
-}
+// class Wallet {
+//     constructor(name, currency,balance, description, transactions) {
+//         this.name = name;
+//         this.currency= currency;
+//         this.balance = balance;
+//         this.description = description;
+//         this.transactions = transactions
+//     }
 
-class Currency {
-    constructor(id, name, symbol){
-        this.id = id;
-        this.name = name;
-        this.symbol = symbol;
-    }
-}
+// }
+
+// class Transaction {
+//     constructor ( id,date, tags, note){
+//         this.id=id;
+//         this.date = date;
+//         this.tags = tags;
+//         this.note = note;
+
+//     }
+// }
+// class Expense extends Transaction{
+
+// }
+// class Income extends Transaction{
+
+// }
+
+// class Currency {
+//     constructor(id, name, symbol){
+//         this.id = id;
+//         this.name = name;
+//         this.symbol = symbol;
+//     }
+// }
     
 
 

@@ -1,8 +1,8 @@
 class Wallet {
-    constructor(name, currencyType, balnce, description){
+    constructor(name, currencyType, balance, description){
         this._name = name
         this._currencyType = currencyType
-        this._balnce = balnce
+        this._balance = balance
         this._description = description
         this._listOfTransaction = []  //contain info about all transactions
     }
@@ -12,8 +12,8 @@ class Wallet {
     get currencyType(){
         return this._currencyType
     }
-    get balnce(){
-        return this._balnce
+    get balance(){
+        return this._balance
     }
     get description(){
         return this._description
@@ -27,10 +27,13 @@ class Wallet {
     set currencyType(currencyType){
         this._currencyType = currencyType
     }
-    set balnce(balnce){
-        this._balnce = balnce
+    set balance(balance){
+        this._balance = balance
     }
     set description(description){
         this._description = description
+    }
+    set listOfTransaction(transaction){
+        this._listOfTransaction.push() = transaction
     }
 }
