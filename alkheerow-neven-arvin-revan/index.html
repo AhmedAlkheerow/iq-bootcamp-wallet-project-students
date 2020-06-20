@@ -76,12 +76,12 @@
               </div>
             </div>
             <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">
-            Close
-          </button>
-          <button type="submit" class="btn btn-primary">Create wallet</button>
-        </div>
-      </div>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">
+              Close
+              </button>
+            <button type="submit" class="btn btn-primary">Create wallet</button>
+            </div>
+          </div>
           </form>
         </div>
         
@@ -91,8 +91,16 @@
   <!-- end of modal  -->
 
   <header>
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-dark bg-dark d-flex justify-content-between">
       <h1 class="text-white ml-3">Wallet App</h1>
+      <div style="display: none;" id="button-select-container">
+        <select name="wallets" id="wallets">
+          
+        </select>
+        <button class="btn btn-primary mt-3" data-toggle="modal" data-target="#addData">
+          Creat New Wallet
+        </button>
+      </div>
     </nav>
   </header>
   <div id="ghost" class="container d-flex justify-content-center flex-column align-items-center">
@@ -165,7 +173,8 @@
 
         </div>
 
-    </div>
+      </form>
+      </div>
   </section>
 
   <section>
@@ -177,7 +186,7 @@
       </div>
     </div>
   </section>
-
+  <script src="./librarys/transaction.js"></script>
   <script src="./librarys/wallet.js"></script>
   <script src="./librarys/htmlcreator.js"></script>
   <script src="index.js"></script>

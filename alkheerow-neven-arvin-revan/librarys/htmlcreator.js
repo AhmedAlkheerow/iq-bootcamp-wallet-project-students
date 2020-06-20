@@ -49,12 +49,30 @@ class CreatHtml{
         
                 </div>
             </form>
+            <ul id="transaction-container">
+
+            </ul>
         </div>
         `
     }
     static createNewTransaction(listOfTransaction){
         listOfTransaction.forEach(element=>{
-            
+            const ul = document.getElementById('transaction-container')
+            ul.insertAdjacentHTML("afterend", `
+            <li>
+                <div>
+                <h1>${element.amoundOfMony}</h1>
+                <div>
+                <h2>${element.transactionNote}</h2>
+                <h3>${element.transactionTag}</h3>
+                </div>
+                </div>
+
+                <div>
+                
+                </div>
+            </li>
+            `)
         })
     }
 }

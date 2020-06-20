@@ -34,6 +34,6 @@ class Wallet {
         this._description = description
     }
     set listOfTransaction(transaction){
-        this._listOfTransaction.push() = transaction
+        this._listOfTransaction.push(transaction) 
     }
 }

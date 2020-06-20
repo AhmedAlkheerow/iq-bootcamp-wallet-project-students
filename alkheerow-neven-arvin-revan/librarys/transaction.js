@@ -1,8 +1,8 @@
 class Transaction{
-    constructor(amoundOfMony, transactionNote, transactionTage){
+    constructor(amoundOfMony, transactionNote, transactionTag){
         this._amoundOfMony = amoundOfMony
         this._transactionNote = transactionNote
-        this._transactionTage = transactionTage
+        this._transactionTag = transactionTag
     }
     get amoundOfMony(){
         return this._amoundOfMony
@@ -10,8 +10,8 @@ class Transaction{
     get transactionNote(){
         return this._transactionNote
     }
-    get transactionTage(){
-        return this._transactiontage
+    get transactionTag(){
+        return this._transactionTag
     }
     set amoundOfMony(amoundOfMony){
         this.amoundOfMony = amoundOfMony
@@ -19,8 +19,8 @@ class Transaction{
     set transactionNote(transactionNote){
         this._transactionNote = transactionNote
     }
-    set transactionTage(transactionTage){
-        this._transactiontage = transactionTage
+    set transactionTag(transactionTag){
+        this._transactiontag = transactionTag
     }
     
 }

@@ -6,3 +6,6 @@
 /* #wallet-container{
     display: none;
 } */
+#transaction-container{
+    list-style-type: none;
+}
